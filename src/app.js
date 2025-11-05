@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 
+//server creation
 const app = express()
 
 app.use(cors({
@@ -20,6 +21,8 @@ import userRouter from './routes/user.route.js'
 
 //route declaration
 app.use("/api/v1/users" , userRouter);
+
+//http://localhost:8000/api/v1/users/register
 
 
 export {app}
